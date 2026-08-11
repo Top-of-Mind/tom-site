@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Case Studies — Top of Mind Labs",
   description:
-    "Agentic AI engagements across regulated, high-stakes workflows — tax, legal, municipal finance, benefits, field operations, and private markets. See what we shipped, what it replaced, and the outcome.",
+    "Agentic AI engagements across regulated, high-stakes workflows — tax, legal, municipal finance, benefits, field operations, healthcare, consumer goods, and private markets. See what we shipped, what it replaced, and the outcome.",
   openGraph: {
     title: "Case Studies — Top of Mind Labs",
     description:
