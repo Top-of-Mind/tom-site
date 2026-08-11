@@ -16,6 +16,9 @@ import {
   MessageSquare,
   CalendarCheck,
   FolderTree,
+  GitMerge,
+  Layers,
+  Blocks,
   Network,
   Scale,
   ClipboardCheck,
@@ -64,8 +67,86 @@ interface Industry {
 
 const industries: Industry[] = [
   {
+    id: "healthcare",
+    label: "Healthcare",
+    cases: [
+      {
+        id: "healthcare-knowledge-graph",
+        deliverable: "From Medallion to Knowledge Graph",
+        description:
+          "We rebuilt the hospital gold layer for MRF and payer Transparency in Coverage price data — replacing a pile of dbt marts, where every new question needed a new mart and no join key survived across sources, with a knowledge graph that lives as a logical layer over the same BigQuery tables.",
+        metric: {
+          label: "Gold layer",
+          before: "Medallion",
+          after: "Knowledge Graph",
+        },
+        capabilities: [
+          {
+            icon: GitMerge,
+            label: "Entity Resolution",
+            description:
+              "NPPES is the provider spine; blocking, probabilistic scoring, and transitive clustering do the rest, with embeddings for messy facility names. Versioned cluster IDs mean merges never break downstream keys.",
+          },
+          {
+            icon: Scale,
+            label: "Reconciliation",
+            description:
+              "MRF and TiC disagree often. We never overwrite — conflicting values become sibling assertions, and a precedence policy derives a consensus view. Divergence becomes a tracked signal, not a COALESCE.",
+          },
+          {
+            icon: Network,
+            label: "The Ontology",
+            description:
+              "We reused rather than invented. FHIR R4 supplies the core classes; SKOS carries CPT, MS-DRG, and NDC. Rates become reified assertion nodes — a price is an n-ary relationship, not an edge property — each carrying PROV-O provenance.",
+          },
+        ],
+        value:
+          "Questions became traversals instead of marts, and the gold backlog dissolved. The graph lives as a logical layer over the same BigQuery tables — no second store, no ID handoff between engines.",
+      },
+    ],
+  },
+  {
+    id: "consumer-goods",
+    label: "Consumer Goods",
+    cases: [
+      {
+        id: "fmcg-semantic-layer",
+        deliverable: "Agent-Ready Semantic Layer",
+        description:
+          "A distributor running on a legacy ERP that holds every order, product, contract, and payment. We land every source table in a queryable store and build a named business vocabulary and machine-callable tools over it.",
+        metric: {
+          label: "Agent tool surface",
+          before: "100+ tools",
+          after: "16 verbs",
+        },
+        capabilities: [
+          {
+            icon: Database,
+            label: "Raw Ingestion, Downstream Interpretation",
+            description:
+              "Pulls every source table without an allowlist — anything filtered at ingest is a question the business has silently decided not to answer.",
+          },
+          {
+            icon: Layers,
+            label: "Business Vocabulary as Named Views",
+            description:
+              "Turns each concept the ERP can't express into a documented view. Nouns compose — so ten views answer more questions than ten tools.",
+          },
+          {
+            icon: Blocks,
+            label: "Consolidated Agent Tool Surface",
+            description:
+              "Exposes sixteen typed verbs, a runtime schema description, and a read-only escape hatch — instead of hundreds of generated tools that flood context.",
+          },
+        ],
+        value:
+          "Making the machine interface primary puts the whole ERP within reach of natural language. It runs unattended in production, and the client's team extends it. A later, unrelated automation reused the same vocabulary without touching ingest or schema — the first automation costs a project, the second a fraction of it.",
+      },
+    ],
+  },
+  {
     id: "tax",
-    label: "Tax & Wealth Advisory",
+    label: "Tax & Wealth",
     cases: [
       {
         id: "tax-copilot",
@@ -104,7 +185,7 @@ const industries: Industry[] = [
   },
   {
     id: "gov",
-    label: "Government & Municipal",
+    label: "Government",
     cases: [
       {
         id: "gov-reports",
@@ -143,7 +224,7 @@ const industries: Industry[] = [
   },
   {
     id: "prop",
-    label: "Property Management",
+    label: "Property",
     cases: [
       {
         id: "prop-insurance",
@@ -260,7 +341,7 @@ const industries: Industry[] = [
   },
   {
     id: "field",
-    label: "Field Operations",
+    label: "Field Ops",
     cases: [
       {
         id: "field-voice",
@@ -526,10 +607,10 @@ export default function CaseStudies() {
               <span className="text-[hsl(var(--muted))]">that can't afford to be wrong.</span>
             </h1>
             <p className="text-base md:text-lg text-[hsl(var(--muted))] max-w-2xl leading-relaxed mt-6">
-              We ship agentic AI into regulated, high-stakes workflows — tax advisory, estate
-              law, municipal finance, benefits underwriting, field operations, and private
-              markets. Pick a vertical to see the deliverable, what it replaced, and the
-              outcome it drove.
+              We ship agentic AI into regulated, high-stakes workflows — tax advisory,
+              estate law, municipal finance, benefits underwriting, field operations,
+              healthcare, consumer goods, and private markets. Pick a vertical to see the
+              deliverable, what it replaced, and the outcome it drove.
             </p>
           </motion.div>
         </div>
@@ -620,7 +701,7 @@ export default function CaseStudies() {
             className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
           >
             <p className="text-xs text-[hsl(var(--muted))] leading-relaxed max-w-xl">
-              Nine engagements across regulated and high-stakes workflows — the deliverable,
+              Eleven engagements across regulated and high-stakes workflows — the deliverable,
               what it replaced, and the outcome it drove.
             </p>
             <Link
