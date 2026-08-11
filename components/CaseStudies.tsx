@@ -700,10 +700,6 @@ export default function CaseStudies() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
           >
-            <p className="text-xs text-[hsl(var(--muted))] leading-relaxed max-w-xl">
-              Eleven engagements across regulated and high-stakes workflows — the deliverable,
-              what it replaced, and the outcome it drove.
-            </p>
             <Link
               href="/#contact"
               className="inline-flex items-center gap-2 text-sm font-medium text-foreground whitespace-nowrap group"
