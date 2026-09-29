@@ -6,7 +6,7 @@ import Link from "next/link";
 
 // Real agents, named — not favored. The strip carries the whole agent-neutrality
 // message in one line, so the page doesn't need a separate section for it.
-const agents = ["Claude Code", "Cursor", "Pi", "Codex", "Amp"];
+const agents = ["Claude Code", "Cursor", "Codex"];
 
 export default function SdlcHero() {
   return (
@@ -32,42 +32,40 @@ export default function SdlcHero() {
           transition={{ duration: 0.8 }}
           className="space-y-9"
         >
-          {/* Positioning badge */}
+          {/* Page label */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
             <span className="inline-flex items-center gap-2.5 bg-surface border border-[hsl(var(--border))] text-muted text-sm px-4 py-2 rounded-full">
-              <span className="relative flex w-2 h-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-              </span>
-              Agent-agnostic · no vendor lock-in
+              <span className="w-2 h-2 rounded-full bg-accent" />
+              Software Dev Lifecycle
             </span>
           </motion.div>
 
-          {/* Heading — outcome, not the tool */}
+          {/* Heading — the symptom, not the tool */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-medium leading-[1.05] tracking-tight text-balance max-w-4xl"
           >
-            <span className="text-foreground">The agent is the easy part.</span>
+            <span className="text-foreground">AI made your team faster at writing code.</span>
             <br />
-            <span className="text-muted">The hard part is everything underneath it.</span>
+            <span className="text-muted">Now it&apos;s stuck in review.</span>
           </motion.h1>
 
-          {/* Subheading — one line */}
+          {/* Subheading */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6 }}
             className="text-lg text-muted max-w-2xl leading-relaxed"
           >
-            We build the substrate underneath your coding agents — the governance, gates, and
-            numbers leadership trusts.
+            We fix the delivery system behind your coding agents — review, CI, quality gates
+            and AI spend — so the code actually ships. Built by engineers who&apos;ve done this
+            at Google and Block.
           </motion.p>
 
           {/* CTA buttons */}
@@ -81,14 +79,14 @@ export default function SdlcHero() {
               href="#contact"
               className="group inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3.5 rounded-lg font-medium text-sm hover:bg-accent-hover transition-all duration-300"
             >
-              Book a technical assessment
+              Book an SDLC Scan
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
             </Link>
             <Link
-              href="#build"
+              href="#how-it-works"
               className="inline-flex items-center justify-center gap-2 text-foreground px-7 py-3.5 rounded-lg font-medium text-sm border border-[hsl(var(--border-strong))] hover:border-[hsl(var(--muted))] hover:bg-surface transition-all duration-300"
             >
-              See what we build
+              See how it works
             </Link>
           </motion.div>
 
