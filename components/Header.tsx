@@ -22,10 +22,16 @@ export default function Header() {
 
   const hash = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 
+  // Routes that render the contact form locally — link straight to it there
+  // (keeps campaign attribution like source=tom-sdlc intact) instead of
+  // bouncing visitors to the homepage's form.
+  const localContact = ["/", "/sdlc", "/case-studies"].includes(pathname);
+  const contactHref = localContact ? "#contact" : "/#contact";
+
   const navItems = [
     { label: "Services", href: hash("services") },
     { label: "Process", href: hash("process") },
-    { label: "Agent Engineering", href: "/sdlc" },
+    { label: "Software Dev Lifecycle", href: "/sdlc" },
     { label: "Case Studies", href: "/case-studies" },
   ];
 
@@ -62,7 +68,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href={hash("contact")}
+              href={contactHref}
               className="bg-accent text-accent-foreground px-5 py-2 rounded-lg text-sm font-medium hover:bg-accent-hover transition-all duration-300"
             >
               Talk to Us
@@ -101,7 +107,7 @@ export default function Header() {
               ))}
               <div className="pt-4">
                 <Link
-                  href={hash("contact")}
+                  href={contactHref}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block text-center bg-accent text-accent-foreground px-6 py-3 rounded-lg text-sm font-medium"
                 >

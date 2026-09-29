@@ -6,7 +6,9 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
 
-export default function Contact() {
+// `source` tags submissions with the page they came from (e.g. "tom-sdlc"
+// for the SDLC campaign) so Formspree can route and attribute them.
+export default function Contact({ source }: { source?: string }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -27,7 +29,7 @@ export default function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(source ? { ...formData, source } : formData),
       });
 
       if (response.ok) {

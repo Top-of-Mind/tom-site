@@ -16,7 +16,7 @@ export default function Footer() {
   const navLinks = [
     { label: "Services", href: hash("services") },
     { label: "Process", href: hash("process") },
-    { label: "Agent Engineering", href: "/sdlc" },
+    { label: "Software Dev Lifecycle", href: "/sdlc" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Focus", href: hash("focus") },
     { label: "Contact", href: hash("contact") },

@@ -26,17 +26,17 @@ export default function SdlcCta() {
 
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-medium text-foreground tracking-tight mb-5 text-balance">
-              Find out what&apos;s ungoverned underneath your agents
+              Find out where your delivery is stuck.
             </h2>
             <p className="text-muted text-base leading-relaxed mb-9">
-              We map it and hand you the list. Whether you work with us after is up to you.
+              Two weeks. A baseline you keep. A ranked list of what to fix.
             </p>
 
             <Link
               href="#contact"
               className="group inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-3.5 rounded-lg font-medium text-sm hover:bg-accent-hover transition-all duration-300"
             >
-              Book a technical assessment
+              Book an SDLC Scan
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
             </Link>
           </div>
