@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
@@ -49,9 +50,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-lg border border-[hsl(var(--border))] bg-accent-soft flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-accent" />
-            </div>
+            <Image
+              src="/images/tom-logo.png"
+              alt="Top of Mind Labs logo"
+              width={512}
+              height={630}
+              priority
+              className="h-8 w-auto rounded-md"
+            />
             <span className="text-sm font-medium text-foreground tracking-widest uppercase">
               Top of Mind Labs
             </span>
