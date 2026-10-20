@@ -63,7 +63,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10 whitespace-nowrap">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -83,7 +83,7 @@ export default function Header() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-muted hover:text-foreground transition-colors"
+            className="lg:hidden p-2 text-muted hover:text-foreground transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -98,7 +98,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden bg-[hsl(var(--background)/0.97)] backdrop-blur-xl border-t border-[hsl(var(--border))]"
+            className="lg:hidden bg-[hsl(var(--background)/0.97)] backdrop-blur-xl border-t border-[hsl(var(--border))]"
           >
             <nav className="px-6 py-6 space-y-1">
               {navItems.map((item) => (
