@@ -53,10 +53,10 @@ export default function Header() {
             <Image
               src="/images/tom-logo.png"
               alt="Top of Mind Labs logo"
-              width={512}
-              height={630}
+              width={101}
+              height={148}
               priority
-              className="h-8 w-auto rounded-md"
+              className="h-8 w-auto"
             />
             <span className="text-sm font-medium text-foreground tracking-widest uppercase">
               Top of Mind Labs
