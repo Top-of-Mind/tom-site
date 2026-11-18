@@ -50,21 +50,6 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-9"
         >
-          {/* Status badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-          >
-            <span className="inline-flex items-center gap-2.5 bg-surface border border-[hsl(var(--border))] text-muted text-sm px-4 py-2 rounded-full">
-              <span className="relative flex w-2 h-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-              </span>
-              Currently accepting new partners
-            </span>
-          </motion.div>
-
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
