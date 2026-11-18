@@ -16,13 +16,13 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Top of Mind Labs — AI Researchers & Engineers Embedded in Your Team",
-  description: "We deploy senior AI researchers and engineers directly into your team. Production AI systems in months, not years — with full knowledge transfer so your team owns it.",
+  title: "Top of Mind Labs — Four Playbooks to Make Portfolio Companies AI-First",
+  description: "Four playbooks, run by AI researchers and engineers embedded in your portfolio company's team: AI-native software development, self-improving agent harnesses, computer-use agents, and AI-ready data infrastructure.",
   keywords: ["AI engineers", "AI researchers", "embedded AI team", "AI consulting", "machine learning", "enterprise AI", "data engineering", "LLM solutions", "AI implementation"],
   authors: [{ name: "Top of Mind Labs" }],
   openGraph: {
-    title: "Top of Mind Labs — AI Researchers & Engineers Embedded in Your Team",
-    description: "Senior AI talent deployed into your organization. We build production systems, train your team, and drive measurable results.",
+    title: "Top of Mind Labs — Four Playbooks to Make Portfolio Companies AI-First",
+    description: "AI-native software development, self-improving agent harnesses, computer-use agents, and AI-ready data infrastructure, delivered by engineers embedded in your team.",
     type: "website",
   },
 };

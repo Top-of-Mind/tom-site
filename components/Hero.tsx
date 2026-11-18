@@ -72,9 +72,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-medium leading-[1.05] tracking-tight text-balance max-w-4xl"
           >
-            <span className="text-foreground">Your AI team,</span>
+            <span className="text-foreground">Turning portfolio companies</span>
             <br />
-            <span className="text-muted">deployed and delivering.</span>
+            <span className="text-muted">into AI-first companies.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -84,7 +84,7 @@ export default function Hero() {
             transition={{ delay: 0.35, duration: 0.6 }}
             className="text-lg text-muted max-w-2xl leading-relaxed"
           >
-            We embed AI researchers and engineers directly in your team — building production systems and training your people to run them.
+            Four playbooks, run by AI researchers and engineers embedded in your portfolio company&apos;s team.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -102,10 +102,10 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
             </Link>
             <Link
-              href="#process"
+              href="#playbooks"
               className="inline-flex items-center justify-center gap-2 text-foreground px-7 py-3.5 rounded-lg font-medium text-sm border border-[hsl(var(--border-strong))] hover:border-[hsl(var(--muted))] hover:bg-surface transition-all duration-300"
             >
-              See how we work
+              See the four playbooks
             </Link>
           </motion.div>
 

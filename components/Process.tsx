@@ -57,7 +57,7 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="mb-12 max-w-2xl"
         >
-          <p className="text-xs text-muted uppercase tracking-widest mb-3">The Playbook</p>
+          <p className="text-xs text-muted uppercase tracking-widest mb-3">How We Work</p>
           <h2 className="text-3xl md:text-4xl font-medium text-foreground tracking-tight mb-3">
             Twelve weeks from kickoff to a system your team owns
           </h2>

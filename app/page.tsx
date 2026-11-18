@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import Playbooks from "@/components/Playbooks";
+import Partners from "@/components/Partners";
 import Process from "@/components/Process";
 // import Testimonials from "@/components/Testimonials";
 import Focus from "@/components/Focus";
@@ -12,7 +13,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
+      <Playbooks />
+      <Partners />
       <Process />
       {/* <Testimonials /> */}
       <Focus />

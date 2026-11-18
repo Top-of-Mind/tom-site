@@ -30,7 +30,7 @@ export default function Header() {
   const contactHref = localContact ? "#contact" : "/#contact";
 
   const navItems = [
-    { label: "Services", href: hash("services") },
+    { label: "Playbooks", href: hash("playbooks") },
     { label: "Process", href: hash("process") },
     { label: "Software Dev Lifecycle", href: "/sdlc" },
     { label: "Case Studies", href: "/case-studies" },

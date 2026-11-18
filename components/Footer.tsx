@@ -14,7 +14,7 @@ export default function Footer() {
   const hash = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 
   const navLinks = [
-    { label: "Services", href: hash("services") },
+    { label: "Playbooks", href: hash("playbooks") },
     { label: "Process", href: hash("process") },
     { label: "Software Dev Lifecycle", href: "/sdlc" },
     { label: "Case Studies", href: "/case-studies" },
